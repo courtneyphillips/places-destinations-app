@@ -14,4 +14,13 @@ describe(Place) do
       expect(Place.all_places()).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it("saves a travel destination for later recall") do
+    test_vacation = Place.new("Detroit, Michigan")
+    test_vacation.save()
+    expect(Place.all_places()).to(eq([test_vacation]))
+    end
+  end
+
 end

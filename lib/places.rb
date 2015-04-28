@@ -13,6 +13,8 @@ class Place
     @@list
   end
 
-
+  define_method(:save) do
+    @@list.push(self)
+  end
 
 end

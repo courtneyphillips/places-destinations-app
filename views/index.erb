@@ -1,0 +1,22 @@
+<DOCTYPE html>
+  <html>
+  <div>
+  <ul>
+  <% @places.each() do |place| %>
+  <li><%= place.destination() %></li>
+  <% end %>
+
+  </ul>
+</div>
+
+<div class="form">
+  <form action="/places" method="post">
+    <div class="form-group">
+      <label for="place">Enter your destination:</label>
+  <input type="text" id="place" name="place">
+</div>
+
+  <button class="btn" action="submit">add</button>
+    </div>
+  </form>
+  </html>

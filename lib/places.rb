@@ -17,4 +17,8 @@ class Place
     @@list.push(self)
   end
 
+  define_singleton_method(:clear) do
+    @@list = []
+  end
+
 end
